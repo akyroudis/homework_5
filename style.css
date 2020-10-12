@@ -1,0 +1,336 @@
+body {
+    margin: 0;
+    background-color: #F2FBFF;
+    font-family: 'Gill', sans-serif;
+}
+
+/*********** HEADER ************/
+header {
+    text-align: center;
+    padding: 10px;
+    background-color: #1A4254;
+    color: white;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Gill', sans-serif;
+}
+
+p {
+    color: #1A4254;
+}
+
+h2 {
+    color: #1A4254;
+}
+
+h3 {
+    color: #1A4254;
+    font-size: 18pt;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36pt;
+    font-family: 'Gill', sans-serif;
+    letter-spacing: 2pt;
+    color: #75D6FF;
+}
+#addToCart {
+    height: 50px;
+    width: 500px;
+    background-color: #75D6FF;
+    color: #1A4254;
+    font-size: 12pt;
+    font-weight: bold;
+}
+#cart {
+    text-align: right;
+}
+/*********** BODY ************/
+.rectangle:hover {
+    box-shadow: 5px 5px #75D6FF;
+}
+
+.circle:hover {
+    box-shadow: 5px 5px #75D6FF;
+}
+
+.circle:active {
+    background-color: orange;
+    box-shadow: 0 5px gray;
+    transform: translateY(2px);
+}
+
+.rectangle:active {
+    background-color: orange;
+    box-shadow: 0 5px gray;
+    transform: translateY(2px);
+}
+
+#color1 {
+    display: none;
+    color: #1A4254;
+}
+#color2 {
+    display: none;
+    color: #1A4254;
+}
+#color3 {
+    display: none;
+    color: #1A4254;
+}
+#color4 {
+    display: none;
+    color: #1A4254;
+}
+#filling1 {
+    display: none;
+    color: #1A4254;
+}
+#filling2 {
+    display: none;
+    color: #1A4254;
+}
+#filling3 {
+    display: none;
+    color: #1A4254;
+}
+
+
+#rectangle1:hover #color1 {
+    display: block;
+}
+#rectangle2:hover #color2 {
+    display: block;
+}
+#rectangle3:hover #color3 {
+    display: block;
+}
+#rectangle4:hover #color4 {
+    display: block;
+}
+#circle1:hover #filling1 {
+    display: block;
+}
+#circle2:hover #filling2 {
+    display: block;
+}
+#circle3:hover #filling3 {
+    display: block;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+}
+
+.columns4 {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+}
+
+.columns3 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+
+.grid-item {
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  height: 260px;
+}
+
+.grid-item a {
+    text-decoration: none;
+    color: #1A4254;
+    font-weight: bold;
+}
+
+#rightColumn {
+    width: 500px;
+    float: left;
+}
+
+#leftColumn {
+  float: left;
+  height: 100%;
+  overflow: auto;
+
+}
+
+.rectangle {
+    height: 50px;
+    width: 50px;
+}
+
+#rectangle1 {
+    background: #EBDE9C;
+}
+
+#rectangle2 {
+    background: #B4D8E8;
+}
+
+#rectangle3 {
+    background: #37809F;
+}
+
+#rectangle4 {
+    background: #47AFFB;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+#circle1 {
+    background: #7BAC9A;
+}
+
+#circle2 {
+    background: #B5A2C8;
+}
+
+#circle3 {
+    background: #D3A6C9;
+}
+
+#leftColumn img {
+    width: 500px;
+    height: auto;
+    padding-top: 25px;
+    padding-left: 25px;
+}
+
+.checked {
+  color: orange;
+}
+
+#reviewLink {
+    color: #1A4254;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#bedPillowTitle {
+    color: #1A4254;
+    font-size: 30pt;
+}
+
+#bedPillowInfo {
+    width: 500px;
+    font-size: 16pt;
+    color: #1A4254;
+}
+
+#bedPillowImg {
+    width: 400px;
+    height: auto;
+    border-radius: 5px;
+}
+
+#couchPillowImg {
+    width: 400px;
+    height: auto;
+    border-radius: 5px;
+
+}
+
+#roundPillowImg {
+    width: 400px;
+    height: auto;
+    border-radius: 5px;
+}
+
+#floorPillowImg {
+    width: 400px;
+    height: auto;
+    border-radius: 5px;
+}
+
+#images {
+  display: flex;
+  align-items: center;
+}
+
+#welcomeMessage {
+    width: 600px;
+    color: #1A4254;
+    font-size: 28pt;
+}
+
+#homeGrid {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    align-items: end;
+}
+
+#homeLeft {
+    width: 600px;
+}
+
+#homeRight {
+    padding-top: 25px;
+    width: 400px;
+}
+
+button a {
+    color:#75D6FF;
+    padding: 10px 10px;
+    align-content: center;
+    font-family: 'Gill', sans-serif;
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+#leftPillows {
+    width: 600px;
+    height: auto;
+    border-radius: 10px;
+}
+
+#rightPillows {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+#learnMore {
+    color: #75D6FF;
+    background-color: #1A4254;
+    border: none;
+    padding: 20px 30px 20px 30px;
+    border-radius: 10px;
+    font-size: 14pt;
+    cursor: pointer;
+    width: 200px;
+    height: 75px;
+}
+
+#price {
+    float: right;
+}
+
+.rectangle:focus {
+    background-color:black;
+}
