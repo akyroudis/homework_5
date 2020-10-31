@@ -5,8 +5,8 @@
         <meta charset="UTF-8">
         <!-- styles -->
         <link rel="stylesheet" type="text/css" href="style.css">
-
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="main.js"></script>
     </head>
     <body>
         <header>
@@ -16,8 +16,9 @@
                 <a href="browse.html">Pillows</a> -
                 <a href="aboutUs.html">About Us</a>
                 <div id="cart">
-                    <a href="index.html">Cart</a>
+                    <a href="cart.html" onclick="goToCartPage()">Cart </a>
                 </div>
+                <div id="cartCount">0</div>
             </nav>
         </header>
         <div class="grid-container">
@@ -29,7 +30,7 @@
                 <img src="https://images.unsplash.com/photo-1571385761622-aa2467d9f4b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2167&q=80" alt="image 3 of bed pillow">
             </div>
             <div id="rightColumn">
-                <h2 id="bedPillowTitle">Bed Pillow <span id="price">$99</span></h2>
+                <h2 class="pillowType"><span id="bedPillowTitle">Bed Pillow</span> <span id="price">$99</span></h2>
                 <div id="rating">
                     <a href="#customerReviews">
                         <span class="fa fa-star checked"></span>
@@ -44,72 +45,77 @@
                 <h3 id="colorsTitle">Colors</h3>
                 <div class="columns4">
                     <div class="innerColumn">
-                        <div class="rectangle" id="rectangle1">
-                            <br>
-                            <br>
-                            <br>
-                            <span id="color1">After School Special</span>
-                        </div>
+                        <input type="radio" name="color" value="After School Special">
+                        <br>
+                        <label class="rectangle" id="rectangle1">
+                            After School Special
+                        </label>
                     </div>
+
                     <div class="innerColumn">
-                        <div class="rectangle" id="rectangle2">
-                            <br>
-                            <br>
-                            <br>
-                            <span id="color2">Morning Haze</span>
-                        </div>
+                        <input type="radio" name="color" value="Morning Haze">
+                        <br>
+                        <label class="rectangle" id="rectangle2">
+                            Morning Haze
+                        </label>
                     </div>
+
                     <div class="innerColumn">
-                        <div class="rectangle" id="rectangle3">
-                            <br>
-                            <br>
-                            <br>
-                            <span id="color3">Cozy Denim</span>
-                        </div>
+                        <input type="radio" name="color" value="Cozy Denim">
+                        <br>
+                        <label class="rectangle" id="rectangle3">
+                            Cozy Denim
+                        </label>
                     </div>
+
                     <div class="innerColumn">
-                        <div class="rectangle" id="rectangle4">
-                            <br>
-                            <br>
-                            <br>
-                            <span id="color4">Rainy Day</span>
-                        </div>
+                        <input type="radio" name="color" value="Rainy Day">
+                        <br>
+                        <label class="rectangle" id="rectangle4">
+                            Rainy Day
+                        </label>
                     </div>
                 </div>
                 <br>
                 <br>
+
                 <h3 id="fillingsTitle">Fillings</h3>
                 <div class="columns3">
+
                     <div class="innerColumn">
-                        <div class="circle" id="circle1">
-                            <br>
-                            <br>
-                            <br>
-                            <span id="filling1">Duck Down</span>
-                        </div>
+                        <input type="radio" name="filling" value="Duck Down">
+                        <br>
+                        <label class="circle" id="circle1">
+                            Duck Down
+                        </label>
+
                     </div>
+
                     <div class="innerColumn">
-                        <div class="circle" id="circle2">
-                            <br>
-                            <br>
-                            <br>
-                            <span id="filling2">Hypoallergenic Poly-Blend</span>
-                        </div>
+                        <input type="radio" name="filling" value="Hypoallergenic Poly-Blend">
+                        <br>
+                        <label class="circle" id="circle2">
+                            Hypoallergenic Poly-Blend
+                        </label>
                     </div>
+
                     <div class="innerColumn">
-                        <div class="circle" id="circle3">
-                            <br>
-                            <br>
-                            <br>
-                            <span id="filling3">Memory Foam</span>
-                        </div>
+                        <input type="radio" name="filling" value="Memory Foam">
+                        <br>
+                        <label class="circle" id="circle3">
+                            Memory Foam
+                        </label>
                     </div>
 
                 </div>
                 <br>
                 <br>
+                <label id="quantityLabel">Quantity:</label>
+                <input type="number" id="quantity">
                 <br>
-                <button type="button" id="addToCart">Add to Cart</button>
+                <br>
+                <br>
+                <button type="button" id="addToCart" onclick="addToCart()">Add to Cart</button>
                 <br>
                 <br>
                 <h3 id="customerReviews">Customer Reviews</h3>

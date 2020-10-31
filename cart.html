@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Fluff Stuff</title>
+        <meta charset="UTF-8">
+        <!-- styles -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="main.js"></script>
+    </head>
+    <body onload="cartList()">
+        <header>
+            <a href="index.html">
+                <h1 id="navTitle">Fluff Stuff</h1>
+            </a>
+            <nav>
+                <a href="index.html">Home</a> -
+                <a href="browse.html">Pillows</a> -
+                <a href="aboutUs.html">About Us</a>
+                <div id="cart">
+                    <a href="cart.html">Cart</a>
+                </div>
+            </nav>
+        </header>
+        <h2 id="cartTitle">Cart</h2>
+        <div id="cartGrid">
+            <div id="cartLeft">
+                <h3>Items:</h3>
+                <p id="itemList"></p>
+            </div>
+
+            <div id="cartRight">
+
+            </div>
+        </div>
+        <button id="purchase" type="button">
+            Purchase
+        </button>
+    </body>
+</html>

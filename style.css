@@ -42,6 +42,29 @@ h1 {
     letter-spacing: 2pt;
     color: #75D6FF;
 }
+
+#cartTitle {
+    text-align: center;
+    font-size: 32pt;
+    font-family: 'Gill', sans-serif;
+    /*letter-spacing: 2pt;*/
+    color: #1A4254;
+
+}
+
+#purchase {
+    height: 50px;
+    width: 500px;
+    background-color: #75D6FF;
+    color: #1A4254;
+    font-size: 12pt;
+    font-weight: bold;
+    justify-content: center;
+    display: grid;
+    align-items: center;
+    margin: auto;
+}
+
 #addToCart {
     height: 50px;
     width: 500px;
@@ -53,16 +76,21 @@ h1 {
 #cart {
     text-align: right;
 }
+
+#cartCount {
+    text-align: right;
+}
+
 /*********** BODY ************/
-.rectangle:hover {
+/*.rectangle:hover {
     box-shadow: 5px 5px #75D6FF;
 }
 
 .circle:hover {
     box-shadow: 5px 5px #75D6FF;
-}
+}*/
 
-.circle:active {
+/*.circle:active {
     background-color: orange;
     box-shadow: 0 5px gray;
     transform: translateY(2px);
@@ -72,7 +100,7 @@ h1 {
     background-color: orange;
     box-shadow: 0 5px gray;
     transform: translateY(2px);
-}
+}*/
 
 #color1 {
     display: none;
@@ -104,7 +132,7 @@ h1 {
 }
 
 
-#rectangle1:hover #color1 {
+/*#rectangle1:hover #color1 {
     display: block;
 }
 #rectangle2:hover #color2 {
@@ -124,7 +152,7 @@ h1 {
 }
 #circle3:hover #filling3 {
     display: block;
-}
+}*/
 
 
 .grid-container {
@@ -279,6 +307,13 @@ h1 {
 }
 
 #homeGrid {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    align-items: end;
+}
+
+#cartGrid {
     display: grid;
     grid-template-columns: auto auto;
     justify-items: center;
