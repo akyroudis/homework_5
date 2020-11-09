@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Fluff Stuff</title>
+        <meta charset="UTF-8">
+        <!-- styles -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="main.js"></script>
+    </head>
+    <body onload="cartList()">
+        <header>
+            <a href="index.html">
+                <h1 id="navTitle">Fluff Stuff</h1>
+            </a>
+            <nav>
+                <a href="index.html">Home</a> -
+                <a href="browse.html">Pillows</a> -
+                <a href="aboutUs.html">About Us</a>
+                <div id="cart">
+                    <a href="cart.html">Cart</a>
+                </div>
+            </nav>
+        </header>
+        <h2 id="cartTitle">Checkout</h2>
+        <div id="cartGrid">
+            <div id="cartLeft">
+                <h3>Items:</h3>
+                <p id="itemList"></p>
+                <br>
+                <h3>Purchasing Information:</h3>
+
+                <!-- credit or debit radio button -->
+                <input type="radio" name="creditOrDebit" value="credit">
+                <label id="credit">
+                    Credit
+                </label>
+                <input type="radio" name="creditOrDebit" value="debit">
+                <label id="debit">
+                    Debit
+                </label>
+                <br> <br> <br>
+
+                <!-- name on card label and field -->
+                <label>Name on Card:</label>
+                <input type="text" id="nameOnCard" name="nameOnCard">
+                <br> <br>
+                <!-- card number -->
+                <label>Card #:</label>
+                <input type="text" id="cardNumber" name="cardNumber">
+                <br> <br>
+                <!-- security code -->
+                <label>Security Code:</label>
+                <input type="text" id="securityCode" name="securityCode">
+
+
+
+            </div>
+
+            <div id="cartRight">
+                <!-- <h3>Shipping Information:</h3> -->
+                <!-- name on card label and field -->
+                <label>Name of Recipient:</label>
+                <input type="text" id="nameOfRecipient" name="nameOfRecipient">
+                <br> <br>
+                <!-- shipping address -->
+                <label>Shipping Address Line 1:</label>
+                <input type="text" id="shippingLine1" name="shippingLine1">
+                <br>
+                <label>Shipping Address Line 2:</label>
+                <input type="text" id="shippingLine2" name="shippingLine2">
+                <br> <br>
+                <!-- zip code -->
+                <label>Zip Code:</label>
+                <input type="text" id="zipCode" name="zipCode">
+                <br> <br>
+                <!-- city -->
+                <label>City:</label>
+                <input type="text" id="city" name="city">
+                <br> <br>
+                <!-- state -->
+                <label>State:</label>
+                <input type="text" id="state" name="state">
+            </div>
+        </div>
+        <br> <br>
+        <button id="checkout" type="button">
+            Complete Purchase
+        </button>
+    </body>
+</html>

@@ -1,4 +1,7 @@
-var productArr = []
+var productArr = [];
+var productArr2 = [];
+
+
 
 class Product {
     constructor(type, color, filling, quantity) {
@@ -35,14 +38,12 @@ function addToCart() {
     var quantity = document.getElementById('quantity').value;
     var quantCount = parseInt(quantity);
 
-    for(var i = 0; i < quantCount; i++) {
-        var pillow = new Product(type, selectedColor, selectedFilling, quantity);
-        productArr.push(pillow);
-    }
+    var pillow = new Product(type, selectedColor, selectedFilling, quantity);
+    productArr.push(pillow);
 
     console.log('productArr: ', productArr);
 
-    updateCartNumber(productArr.length)
+    updateCartNumber(productArr.length);
 }
 
 
@@ -59,9 +60,12 @@ function goToCartPage() {
     var productArr2 = JSON.parse(loadedProductArr);
 
     var items = document.getElementById('itemList');
-    items.innerHTML = 'test';
+
 }
 
+var itemList = [];
+
+var deleteButton = '<button id="delete" type="button" onclick="deleteItem(this)">Delete Item</button>';
 
 function cartList() {
     var loadedProductArr = localStorage.getItem('order');
@@ -70,21 +74,55 @@ function cartList() {
     var items = [];
     var summaryList = [];
 
-    for(var i = 0; i < productArr2.length; i++) {
-       var type = productArr2[i]['type'];
-       var color = productArr2[i]['color'];
-       var filling = productArr2[i]['filling'];
-       var quantity = productArr2[i]['quantity'];
-       summary = quantity + 'x ' + type + ' (Color: ' + color + ', Filling: ' + filling + ')' + '<br>';
-       summaryList.push(summary);
-       // console.log(summary)
+    if (productArr2.length > 0) {
+        console.log('productArr2: ' + productArr2);
+        for (var c = 0; c < productArr2.length; c++) {
+            var type = productArr2[c]['type'];
+            var color = productArr2[c]['color'];
+            var filling = productArr2[c]['filling'];
+            var quantity = productArr2[c]['quantity'];
+            var quantityNumber = parseInt(quantity);
 
+            if (quantityNumber <= 1) {
+                summary = '<span id="' + c + '">' + quantity + 'x ' + type + ' (Color: ' + color + ', Filling: ' + filling + ')' + deleteButton + '</span>' + '<br>';
+                summaryList.push(summary);
+            }
+            else if (quantityNumber > 1) {
+                for (var i = 0; i < quantityNumber; i++) {
+                    if (i == 0) {
+                        summary = '<span id="' + c + '">' + quantity + 'x ' + type + ' (Color: ' + color + ', Filling: ' + filling + ')' + deleteButton + '</span>' + '<br>';
+                        summaryList.push(summary);                    }
+                }
+            }
+        }
+    console.log('summary list: ' + summaryList);
     }
-    var itemList = document.getElementById('itemList');
 
-    // for(var i=0; i<summaryList.length;i++){
-    //     summaryListEdited = summaryList[i];
-    // }
-    itemList.innerHTML = summaryList;
+    // grab HTML element
+    itemList = document.getElementById('itemList');
 
+    // display cart info without list formatting
+    for (var i = 0; i < summaryList.length; i++){
+        itemList.innerHTML += summaryList[i];
+    }
+}
+
+function deleteItem(elem) {
+    var itemID = elem.parentNode.id;
+    var element = document.getElementById(itemID);
+    element.innerHTML = '';
+
+    var loadedProductArr = localStorage.getItem('order');
+    var productArr2 = JSON.parse(loadedProductArr);
+
+    productArr2.splice(itemID, 1);
+
+    localStorage.setItem('order', JSON.stringify(productArr2));
+    console.log('productArr2:');
+    console.log(productArr2);
+}
+
+
+function goToCheckoutPage() {
+    window.location.href = "checkout.html";
 }
